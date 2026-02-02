@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className='w-full bg-gray-800 '>
+        <div className='w-full bg-gray-800 text-white dark:bg-yellow-950'>
             <div className='grid  md:grid-cols-3 py-10'>
                 <div className='flex items-center flex-col '>
                     <img src="/img/logo/misa.webp" className=' w-40 md:w-52 dark:hidden' alt="" />

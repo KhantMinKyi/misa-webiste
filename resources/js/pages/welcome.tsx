@@ -1,12 +1,16 @@
 
 
 import Carousel from '@/components/home/carousel';
+import Gallery from '@/components/home/gallery';
 import Hero from '@/components/home/hero';
 import InfoSection from '@/components/home/info-section';
+import Information from '@/components/home/information';
+import PostGrid from '@/components/home/post-grid';
 import FrontendLayout from '@/layouts/frontend-layout';
 
-import { type SharedData } from '@/types';
+import { CategoryTag, Post, type SharedData } from '@/types';
 import { Head, Link, usePage } from '@inertiajs/react';
+import { useState } from 'react';
 
 const carouselData = [
     {
@@ -28,7 +32,20 @@ const carouselData = [
         top_sub_title: 'The IB Diploma Programme',
     },
 ];
-export default function Welcome() {
+const myImages = [
+    { id: 1, src: "/img/banner/banner_1.webp", alt: "Students in Library" },
+    { id: 2, src: "/img/banner/banner_2.webp", alt: "Sports Day" },
+    { id: 3, src: "/img/banner/banner_1.webp", alt: "Science Lab" },
+    { id: 4, src: "/img/banner/banner_2.webp", alt: "Graduation" },
+    { id: 5, src: "/img/banner/banner_1.webp", alt: "Students in Library" },
+    { id: 6, src: "/img/banner/banner_2.webp", alt: "Sports Day" },
+    { id: 7, src: "/img/banner/banner_1.webp", alt: "Science Lab" },
+    { id: 8, src: "/img/banner/banner_2.webp", alt: "Graduation" },
+    // ... add as many as you want
+];
+export default function Welcome({ posts, category_tags }: { posts: Post[], category_tags: CategoryTag[] }) {
+    const postsData = posts;
+    const categoryTagData = category_tags;
     const { auth } = usePage<SharedData>().props;
 
     return (
@@ -48,7 +65,10 @@ export default function Welcome() {
                 <Carousel />
                 <Hero />
                 <InfoSection />
-                <div className="flex w-full h-screen flex-col items-center justify-center opacity-100 transition-opacity duration-750 lg:grow">
+                <Gallery images={myImages} />
+                <Information />
+                <div className='container mx-auto mt-20'>
+                    <PostGrid posts={postsData} categories={categoryTagData} />
                 </div>
             </FrontendLayout>
         </>
