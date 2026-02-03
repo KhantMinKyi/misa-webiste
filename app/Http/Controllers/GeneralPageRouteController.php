@@ -26,4 +26,12 @@ class GeneralPageRouteController extends Controller
             'category_tags' => $category_tags,
         ]);
     }
+    public function getHistoryPage()
+    {
+        return Inertia::render('frontend/about_us/OurHistory');
+    }
+    public function getMissionVisionPage()
+    {
+        return Inertia::render('frontend/about_us/OurMissionVision');
+    }
 }

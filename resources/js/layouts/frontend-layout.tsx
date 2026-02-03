@@ -43,7 +43,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                 <div className='flex justify-center uppercase '>
                     <ul className='flex items-center justify-center h-20 '>
                         <li className='  '>
-                            <Link href="/" className='hover:text-brand hover:border-brand border-r-2 border-gray-600 px-10'>Home</Link>
+                            <Link href='/' className='hover:text-brand hover:border-brand border-r-2 border-gray-600 px-10'>Home</Link>
                         </li>
                         <li className='relative group h-full flex items-center  last:border-r-0'>
                             <Link href="/about" className="hover:text-brand  hover:border-brand transition border-r-2 border-gray-600 px-6">
@@ -52,13 +52,26 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                             <div className='absolute top-full left-0 w-48 bg-secondary-brand-dark text-white shadow-lg hidden group-hover:block z-50'>
                                 <ul className='flex flex-col text-sm text-left'>
                                     <li className='border-b border-gray-700 hover:text-brand'>
-                                        <Link href="/about/history" className='block px-4 py-3'>Our History</Link>
+                                        <Link href='/our-history' className='block px-4 py-3'>Our History</Link>
+                                    </li>
+
+                                    <li className='border-b border-gray-700 hover:text-brand'>
+                                        <Link href="/our-mission-and-vision" className='block px-4 py-3'> Mission & Vision</Link>
                                     </li>
                                     <li className='border-b border-gray-700 hover:text-brand'>
-                                        <Link href="/about/team" className='block px-4 py-3'>Our Team</Link>
+                                        <Link href="#" className='block px-4 py-3'> Philosophy</Link>
                                     </li>
-                                    <li className='hover:text-brand'>
-                                        <Link href="/about/vision" className='block px-4 py-3'>Vision & Mission</Link>
+                                    <li className='border-b border-gray-700 hover:text-brand'>
+                                        <Link href="#" className='block px-4 py-3'> Teachers</Link>
+                                    </li>
+                                    <li className='border-b border-gray-700 hover:text-brand'>
+                                        <Link href="#" className='block px-4 py-3'>Sister Scools</Link>
+                                    </li>
+                                    <li className='border-b border-gray-700 hover:text-brand'>
+                                        <Link href="#" className='block px-4 py-3'>Admin Team</Link>
+                                    </li>
+                                    <li className='border-b border-gray-700 hover:text-brand'>
+                                        <Link href="#" className='block px-4 py-3'>School Profile</Link>
                                     </li>
                                 </ul>
                             </div>

@@ -12,6 +12,8 @@ use Laravel\Fortify\Features;
 // })->name('home');
 
 Route::get('/', [GeneralPageRouteController::class, 'getHomePage'])->name('home');
+require __DIR__ . '/route_groups/frontend/about_us.php';
+
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {

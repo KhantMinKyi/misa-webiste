@@ -1,7 +1,7 @@
 import { Link } from '@inertiajs/react';
 import { MapPinIcon } from 'lucide-react';
 import * as motion from 'motion/react-client';
-function Information() {
+function HistoryBanner() {
     return (
         <section className="relative z-20 flex flex-col justify-center overflow-hidden py-[120px] sm:py-[80px] sm:pt-[60px] md:py-[90px] md:pt-[70px] dark:bg-neutral-950">
             <div className="mx-auto max-w-7xl">
@@ -19,8 +19,7 @@ function Information() {
                                 <span className="font-merriweather mb-1 inline-block text-xl font-normal text-brand-core underline">“MISA”</span>
                                 <h2 className="font-merriweather mb-5 text-3xl font-bold sm:text-4xl lg:text-6xl dark:text-yellow-400">School History </h2>
                                 <p className="mb-5">
-                                    Mandalay International School of Acumen is a comprehensive Kg to 12 private international school, in primary and high school campuses; the high school enrolling up to 400 students in grades 6–12 (Year 7-13). The school opened in 2004 and graduated its first senior class in 2009. Mandalay International Science academy is registered at the Cambridge Assessment International Education as Cambridge International school, holds membership in the College Board and is recognized by the UCAS.
-
+                                    MISA Campus was purpose-built in 2010 and is located on 58th Street (Between 27th & 28th Street). This new campus provides a spacious, comfortable, and well-designed space for learning, with state-of-the-art facilities. Mandalay International School of Acumen is happy to welcome you. We are located at a strategic point connecting Chan Aye Thar Zan township and the rest of the city.
                                     {' '}
                                 </p>
                                 <ul className="col:block mb-8 flex">
@@ -128,4 +127,4 @@ function Information() {
     );
 }
 
-export default Information;
+export default HistoryBanner;
