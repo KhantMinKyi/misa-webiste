@@ -71,7 +71,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                         <Link href="/admin-team" className='block px-4 py-3'>Admin Team</Link>
                                     </li>
                                     <li className='border-b border-gray-700 hover:text-brand'>
-                                        <Link href="#" className='block px-4 py-3'>School Profile</Link>
+                                        <Link href="/school-profile" className='block px-4 py-3'>School Profile</Link>
                                     </li>
                                 </ul>
                             </div>

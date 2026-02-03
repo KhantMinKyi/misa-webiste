@@ -46,4 +46,8 @@ class GeneralPageRouteController extends Controller
     {
         return Inertia::render('frontend/about_us/AdminTeam');
     }
+    public function getSchoolProfilePage()
+    {
+        return Inertia::render('frontend/about_us/SchoolProfile');
+    }
 }
