@@ -4,12 +4,12 @@ import { FaTimes } from 'react-icons/fa'; // Optional: for a visible close butto
 import { ChevronRight, } from 'lucide-react';
 import { FiChevronRight } from 'react-icons/fi';
 import { Link } from '@inertiajs/react';
-import { GalleryType } from '@/types';
+import { FacilityType } from '@/types';
 
 
 
 interface GalleryProps {
-    images: GalleryType[];
+    images: FacilityType[];
     showLink: boolean
 }
 

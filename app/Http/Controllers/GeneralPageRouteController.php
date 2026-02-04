@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Calendar;
 use App\Models\CategoryTag;
+use App\Models\Facility;
 use App\Models\Gallery;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -15,7 +16,7 @@ class GeneralPageRouteController extends Controller
     public function getHomePage(Request $request)
     {
 
-        $images = Gallery::limit(8)->get();
+        $images = Facility::limit(8)->get();
         $current_post = request()->input('current_post');
         $query = Post::with(['category_tags.category_tag'])->where('status', 1)->limit(3);
         if ($current_post) {
@@ -86,6 +87,14 @@ class GeneralPageRouteController extends Controller
     {
         $images = Calendar::paginate(4);
         return Inertia::render('frontend/student_life/Calendar', [
+            'images' => $images,
+            'showLink' => false
+        ]);
+    }
+    public function getFacilitiesPage()
+    {
+        $images = Facility::paginate(8);
+        return Inertia::render('frontend/student_life/Facility', [
             'images' => $images,
             'showLink' => false
         ]);

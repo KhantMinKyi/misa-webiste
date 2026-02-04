@@ -9,22 +9,12 @@ import Information from '@/components/home/information';
 import PostGrid from '@/components/home/post-grid';
 import FrontendLayout from '@/layouts/frontend-layout';
 
-import { CategoryTag, GalleryType, Post, type SharedData } from '@/types';
+import { CategoryTag, FacilityType, GalleryType, Post, type SharedData } from '@/types';
 import { Head, Link, usePage } from '@inertiajs/react';
 import { useState } from 'react';
 
-// const myImages = [
-//     { id: 1, src: "/img/banner/banner_1.webp", alt: "Students in Library" },
-//     { id: 2, src: "/img/banner/banner_2.webp", alt: "Sports Day" },
-//     { id: 3, src: "/img/banner/banner_1.webp", alt: "Science Lab" },
-//     { id: 4, src: "/img/banner/banner_2.webp", alt: "Graduation" },
-//     { id: 5, src: "/img/banner/banner_1.webp", alt: "Students in Library" },
-//     { id: 6, src: "/img/banner/banner_2.webp", alt: "Sports Day" },
-//     { id: 7, src: "/img/banner/banner_1.webp", alt: "Science Lab" },
-//     { id: 8, src: "/img/banner/banner_2.webp", alt: "Graduation" },
-//     // ... add as many as you want
-// ];
-export default function Welcome({ posts, category_tags, images }: { posts: Post[], category_tags: CategoryTag[], images: GalleryType[] }) {
+
+export default function Welcome({ posts, category_tags, images }: { posts: Post[], category_tags: CategoryTag[], images: FacilityType[] }) {
     const postsData = posts;
     const categoryTagData = category_tags;
 

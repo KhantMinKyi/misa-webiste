@@ -168,8 +168,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                         isActive('/news') ||
                                         isActive('/gallery') ||
                                         isActive('/calendar') ||
-                                        isActive('/alumni') ||
-                                        isActive('/alumni')
+                                        isActive('/facilities')
                                         ? `text-brand border-brand ${isScrolled ? '' : ''}`
                                         : `${isScrolled ? 'text-secondary-brand-dark hover:text-brand border-gray-300' : 'text-white hover:text-brand border-gray-600'}`}`
                                 }
@@ -190,9 +189,10 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                     <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/calendar') ? 'text-brand' : 'hover:text-brand'}`}>
                                         <Link href="/calendar" className='block px-6 py-2 transition-colors'>Calendar</Link>
                                     </li>
-                                    <li className='hover:text-brand'>
-                                        <Link href="#" className='block px-6 py-2 transition-colors'>Facilities</Link>
+                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/facilities') ? 'text-brand' : 'hover:text-brand'}`}>
+                                        <Link href="/facilities" className='block px-6 py-2 transition-colors'>Facilities</Link>
                                     </li>
+
                                 </ul>
                             </div>
                         </li>
