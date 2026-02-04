@@ -13,6 +13,7 @@ use Laravel\Fortify\Features;
 
 Route::get('/', [GeneralPageRouteController::class, 'getHomePage'])->name('home');
 require __DIR__ . '/route_groups/frontend/about_us.php';
+require __DIR__ . '/route_groups/frontend/student_life.php';
 
 
 Route::middleware(['auth', 'verified'])->group(function () {

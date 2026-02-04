@@ -26,6 +26,7 @@ class GeneralPageRouteController extends Controller
             'category_tags' => $category_tags,
         ]);
     }
+    // About Us
     public function getHistoryPage()
     {
         return Inertia::render('frontend/about_us/OurHistory');
@@ -49,5 +50,10 @@ class GeneralPageRouteController extends Controller
     public function getSchoolProfilePage()
     {
         return Inertia::render('frontend/about_us/SchoolProfile');
+    }
+    // Student Life
+    public function getAlumniPage()
+    {
+        return Inertia::render('frontend/student_life/Alumni');
     }
 }

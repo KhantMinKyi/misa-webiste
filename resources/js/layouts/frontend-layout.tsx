@@ -162,13 +162,24 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                             </div>
                         </li>
                         <li className='relative group h-full flex items-center last:border-r-0'>
-                            <Link href="/about" className={`transition border-r-2 px-6 py-3 ${isScrolled ? 'text-secondary-brand-dark hover:text-brand border-gray-300' : 'text-white hover:text-brand border-gray-600'}`}>
+                            <Link href="#"
+                                className={`transition border-r-2 px-6 py-3
+                                    ${isActive('/alumni') ||
+                                        isActive('/alumni') ||
+                                        isActive('/alumni') ||
+                                        isActive('/alumni') ||
+                                        isActive('/alumni') ||
+                                        isActive('/alumni')
+                                        ? `text-brand border-brand ${isScrolled ? '' : ''}`
+                                        : `${isScrolled ? 'text-secondary-brand-dark hover:text-brand border-gray-300' : 'text-white hover:text-brand border-gray-600'}`}`
+                                }
+                            >
                                 Student Life
                             </Link>
                             <div className={`absolute top-full left-0 w-48 shadow-lg hidden group-hover:block z-50 ${isScrolled ? 'bg-white text-secondary-brand-dark' : 'bg-secondary-brand-dark text-white'}`}>
                                 <ul className={`flex flex-col text-sm text-left ${isScrolled ? 'border-gray-300' : 'border-gray-700'}`}>
-                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} hover:text-brand`}>
-                                        <Link href="#" className='block px-6 py-2 transition-colors'>Alumni</Link>
+                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/alumni') ? 'text-brand' : 'hover:text-brand'}`}>
+                                        <Link href="/alumni" className='block px-6 py-2 transition-colors'>Alumni</Link>
                                     </li>
                                     <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} hover:text-brand`}>
                                         <Link href="#" className='block px-6 py-2 transition-colors'>News</Link>
