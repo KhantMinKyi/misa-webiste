@@ -61,7 +61,7 @@ const OurPhilosophy = () => {
                             transition={{ duration: 0.5, ease: 'easeInOut' }} // longer duration
                         >
                             <div className="relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center md:py-40 lg:py-52">
-                                <img src="/img/bfi.webp" className="max-w-40" alt="" />
+                                <img src="/img/logo/misa.webp" className="max-w-40" alt="" />
                                 <h2 className=" mb-4 text-3xl font-bold md:text-5xl">Our Philosophy</h2>
                                 {/* <p className="mb-6 max-w-2xl text-lg md:text-xl">Our path through innovation, challenge, and achievement.</p> */}
                             </div>
@@ -73,8 +73,8 @@ const OurPhilosophy = () => {
                     >
                         {/* <div className="absolute inset-0 dark:bg-black/80"></div> */}
                         <div className="flex flex-col items-center justify-center px-4 py-10 text-center md:py-10 lg:py-10">
-                            <img src="/img/bfi.webp" className="max-w-40 dark:hidden" alt="" />
-                            <img src="/img/bfi_b.webp" className="hidden max-w-40 dark:block" alt="" />
+                            <img src="/img/logo/misa.webp" className="max-w-40 dark:hidden" alt="" />
+                            <img src="/img/logo/misa_b.webp" className="hidden max-w-40 dark:block" alt="" />
                         </div>
                         <div className="mx-auto max-w-7xl">
                             {/* <div className="grid grid-cols-12 gap-x-4"> */}
