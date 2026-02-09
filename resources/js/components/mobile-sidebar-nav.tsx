@@ -354,13 +354,24 @@ const MobileSidebarNav: React.FC<MobileSidebarNavProps> = ({ isOpen, onClose, cu
                         </div>
                     </li>
 
-                    <li className='border-b border-gray-700 hover:text-brand'>
-                        <Link href='/' className='block px-4 py-3 transition-colors' onClick={handleLinkClick}>
+                    <li className='border-b border-gray-700'>
+                        <Link
+                            href='/events-and-news'
+                            className={`block px-4 py-3 hover:text-brand transition-colors ${isActive('/events-and-news') ? 'text-brand font-semibold' : ''
+                                }`}
+                            onClick={handleLinkClick}
+                        >
                             Events & News
                         </Link>
                     </li>
-                    <li className='hover:text-brand'>
-                        <Link href='/' className='block px-4 py-3 transition-colors' onClick={handleLinkClick}>
+
+                    <li className='border-b border-gray-700'>
+                        <Link
+                            href='/contact-us'
+                            className={`block px-4 py-3 hover:text-brand transition-colors ${isActive('/contact-us') ? 'text-brand font-semibold' : ''
+                                }`}
+                            onClick={handleLinkClick}
+                        >
                             Contact
                         </Link>
                     </li>

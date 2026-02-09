@@ -260,12 +260,22 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                 </ul>
                             </div>
                         </li>
-                        <li className={`border-r-2 px-6 py-3 hover:text-brand transition ${isScrolled ? 'text-secondary-brand-dark border-gray-300 text-sm xl:text-base' : 'text-white border-gray-600'}`}>
-                            <Link href="/">Events & News</Link>
-                        </li>
-                        <li className={`border-r-2 px-6 py-3 hover:text-brand transition last:border-r-0 ${isScrolled ? 'text-secondary-brand-dark border-gray-300 text-sm xl:text-base' : 'text-white border-gray-600'}`}>
-                            <Link href="/">Contact</Link>
-                        </li>
+                        <Link href='/events-and-news'
+                                className={`transition border-r-2 px-6 py-3 
+                                        ${isActive('/events-and-news')
+                                        ? `text-brand border-brand ${isScrolled ? 'text-sm xl:text-base' : ''}`
+                                        : `${isScrolled ? 'text-secondary-brand-dark hover:text-brand border-gray-300 text-sm xl:text-base' : 'text-white hover:text-brand border-gray-600'}`}`
+                                }
+                            >Events & News
+                        </Link>
+                        <Link href='/contact-us'
+                                className={`transition border-r-2 px-6 py-3 
+                                        ${isActive('/contact-us')
+                                        ? `text-brand border-brand ${isScrolled ? 'text-sm xl:text-base' : ''}`
+                                        : `${isScrolled ? 'text-secondary-brand-dark hover:text-brand border-gray-300 text-sm xl:text-base' : 'text-white hover:text-brand border-gray-600'}`}`
+                                }
+                            >Contact
+                            </Link>     
 
                     </ul>
                     <div>

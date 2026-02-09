@@ -16,8 +16,8 @@ require __DIR__ . '/route_groups/frontend/about_us.php';
 require __DIR__ . '/route_groups/frontend/student_life.php';
 require __DIR__ . '/route_groups/frontend/education.php';
 require __DIR__ . '/route_groups/frontend/admission.php';
-
-
+require __DIR__ . '/route_groups/frontend/events_and_news.php';
+require __DIR__ . '/route_groups/frontend/contact_us.php';
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');

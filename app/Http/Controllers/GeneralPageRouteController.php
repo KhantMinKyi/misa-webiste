@@ -130,4 +130,9 @@ class GeneralPageRouteController extends Controller
     {
         return Inertia::render('frontend/admission/WithdrawalPolicy');
     }
+    // Contact Us
+    public function getContactUsPage()
+    {
+        return Inertia::render('frontend/contact_us/ContactUs');
+    }
 }
