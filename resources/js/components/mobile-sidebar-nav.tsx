@@ -41,7 +41,7 @@ const MobileSidebarNav: React.FC<MobileSidebarNavProps> = ({ isOpen, onClose, cu
             } else if (
                 currentUrl?.includes('/kindergarten-programs') ||
                 currentUrl?.includes('/primary-school-programs') ||
-                currentUrl?.includes('/secondary') ||
+                currentUrl?.includes('/secondary-school-programs') ||
                 currentUrl?.includes('/igcse')
             ) {
                 setExpandedMenu('education');
@@ -296,7 +296,8 @@ const MobileSidebarNav: React.FC<MobileSidebarNavProps> = ({ isOpen, onClose, cu
                                     </Link>
                                 </li>
                                 <li className='border-b border-gray-700 hover:text-brand'>
-                                    <Link href='#' className='block px-6 py-2 transition-colors' onClick={handleLinkClick}>
+                                    <Link href='/secondary-school-programs' className={`block px-6 py-2 transition-colors ${isActive('/secondary-school-programs') ? 'text-brand' : ''
+                                        }`} onClick={handleLinkClick}>
                                         Secondary
                                     </Link>
                                 </li>

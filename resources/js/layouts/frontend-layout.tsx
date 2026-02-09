@@ -201,7 +201,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                 className={`transition border-r-2 px-6 py-3
                                     ${isActive('/kindergarten-programs') ||
                                         isActive('/primary-school-programs') ||
-                                        isActive('/kindergarten-programs') ||
+                                        isActive('/secondary-school-programs') ||
                                         isActive('/kindergarten-programs') ||
                                         isActive('/kindergarten-programs')
                                         ? `text-brand border-brand ${isScrolled ? 'text-sm xl:text-base' : ''}`
@@ -218,8 +218,9 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                     <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/primary-school-programs') ? 'text-brand' : 'hover:text-brand'}`}>
                                         <Link href="/primary-school-programs" className='block px-6 py-2 transition-colors'>Primary</Link>
                                     </li>
-                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} hover:text-brand`}>
-                                        <Link href="#" className='block px-6 py-2 transition-colors'>Secondary</Link>
+                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/secondary-school-programs') ? 'text-brand' : 'hover:text-brand'}`}>
+
+                                        <Link href="/secondary-school-programs" className='block px-6 py-2 transition-colors'>Secondary</Link>
                                     </li>
                                     <li className='hover:text-brand'>
                                         <Link href="#" className='block px-6 py-2 transition-colors'>IGCSE</Link>

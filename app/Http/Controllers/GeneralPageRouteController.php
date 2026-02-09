@@ -108,4 +108,8 @@ class GeneralPageRouteController extends Controller
     {
         return Inertia::render('frontend/education/PrimarySchool');
     }
+    public function getSecondarySchoolPage()
+    {
+        return Inertia::render('frontend/education/SecondarySchool');
+    }
 }
