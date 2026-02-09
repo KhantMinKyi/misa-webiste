@@ -126,4 +126,8 @@ class GeneralPageRouteController extends Controller
     {
         return Inertia::render('frontend/admission/AdmissionProcess');
     }
+    public function getWithdrawalPolicyPage()
+    {
+        return Inertia::render('frontend/admission/WithdrawalPolicy');
+    }
 }

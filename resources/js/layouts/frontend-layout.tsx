@@ -234,7 +234,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                 className={`transition border-r-2 px-6 py-3
                                     ${isActive('/studentadmission') ||
                                         isActive('/admission-process') ||
-                                        isActive('/studentadmission') ||
+                                        isActive('/withdrawal-policy') ||
                                         isActive('/studentadmission')
                                         ? `text-brand border-brand ${isScrolled ? 'text-sm xl:text-base' : ''}`
                                         : `${isScrolled ? 'text-secondary-brand-dark hover:text-brand border-gray-300 text-sm xl:text-base' : 'text-white hover:text-brand border-gray-600'}`}`
@@ -250,8 +250,9 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                     <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/admission-process') ? 'text-brand' : 'hover:text-brand'}`}>
                                         <Link href="/admission-process" className='block px-6 py-2 transition-colors'>Admission Process</Link>
                                     </li>
-                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} hover:text-brand`}>
-                                        <Link href="#" className='block px-6 py-2 transition-colors'>Withdrawal Policy </Link>
+                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/withdrawal-policy') ? 'text-brand' : 'hover:text-brand'}`}>
+
+                                        <Link href="/withdrawal-policy" className='block px-6 py-2 transition-colors'>Withdrawal Policy </Link>
                                     </li>
                                     <li className='hover:text-brand'>
                                         <Link href="#" className='block px-6 py-2 transition-colors'>Career</Link>
