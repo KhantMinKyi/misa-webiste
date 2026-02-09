@@ -46,7 +46,7 @@ const MobileSidebarNav: React.FC<MobileSidebarNavProps> = ({ isOpen, onClose, cu
             ) {
                 setExpandedMenu('education');
             } else if (
-                currentUrl?.includes('/admission') ||
+                currentUrl?.includes('/studentadmission') ||
                 currentUrl?.includes('/admission-process') ||
                 currentUrl?.includes('/withdrawal-policy') ||
                 currentUrl?.includes('/career')
@@ -329,7 +329,8 @@ const MobileSidebarNav: React.FC<MobileSidebarNavProps> = ({ isOpen, onClose, cu
                         >
                             <ul className='flex flex-col bg-secondary-brand-dark/50 text-sm'>
                                 <li className='border-b border-gray-700 hover:text-brand'>
-                                    <Link href='#' className='block px-6 py-2 transition-colors' onClick={handleLinkClick}>
+                                    <Link href='/studentadmission' className={`block px-6 py-2 transition-colors ${isActive('/studentadmission') ? 'text-brand' : ''
+                                        }`} onClick={handleLinkClick}>
                                         Student Admission
                                     </Link>
                                 </li>

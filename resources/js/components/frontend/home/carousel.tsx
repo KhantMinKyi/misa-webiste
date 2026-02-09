@@ -73,7 +73,7 @@ export default function FullScreenCarousel() {
 
                                     {/* Optional Button */}
                                     <div className="pt-4">
-                                        <button className="rounded-full cursor-pointer bg-brand-core px-8 py-3 text-sm font-bold text-whit hover:text-black transition hover:bg-brand">
+                                        <button className="rounded-full cursor-pointer bg-brand-core px-8 py-3 text-sm font-bold text-white hover:text-black transition hover:bg-brand">
                                             FIND OUT MORE
                                         </button>
                                     </div>

@@ -116,4 +116,10 @@ class GeneralPageRouteController extends Controller
     {
         return Inertia::render('frontend/education/Igcse');
     }
+
+    // Admission 
+    public function getStudentAdmissionPage()
+    {
+        return Inertia::render('frontend/admission/StudentAdmission');
+    }
 }
