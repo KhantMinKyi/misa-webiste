@@ -48,8 +48,7 @@ const MobileSidebarNav: React.FC<MobileSidebarNavProps> = ({ isOpen, onClose, cu
             } else if (
                 currentUrl?.includes('/studentadmission') ||
                 currentUrl?.includes('/admission-process') ||
-                currentUrl?.includes('/withdrawal-policy') ||
-                currentUrl?.includes('/career')
+                currentUrl?.includes('/withdrawal-policy')
             ) {
                 setExpandedMenu('admission');
             }
@@ -347,9 +346,9 @@ const MobileSidebarNav: React.FC<MobileSidebarNavProps> = ({ isOpen, onClose, cu
                                     </Link>
                                 </li>
                                 <li className='hover:text-brand'>
-                                    <Link href='#' className='block px-6 py-2 transition-colors' onClick={handleLinkClick}>
+                                    <a href='https://www.jobnet.com.mm/companies/bfi-education-services-company-limited/e-11033' target='_blank' className='block px-6 py-2 transition-colors' onClick={handleLinkClick}>
                                         Career
-                                    </Link>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

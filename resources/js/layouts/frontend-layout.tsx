@@ -234,8 +234,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                 className={`transition border-r-2 px-6 py-3
                                     ${isActive('/studentadmission') ||
                                         isActive('/admission-process') ||
-                                        isActive('/withdrawal-policy') ||
-                                        isActive('/studentadmission')
+                                        isActive('/withdrawal-policy')
                                         ? `text-brand border-brand ${isScrolled ? 'text-sm xl:text-base' : ''}`
                                         : `${isScrolled ? 'text-secondary-brand-dark hover:text-brand border-gray-300 text-sm xl:text-base' : 'text-white hover:text-brand border-gray-600'}`}`
                                 }
@@ -255,7 +254,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                         <Link href="/withdrawal-policy" className='block px-6 py-2 transition-colors'>Withdrawal Policy </Link>
                                     </li>
                                     <li className='hover:text-brand'>
-                                        <Link href="#" className='block px-6 py-2 transition-colors'>Career</Link>
+                                        <a href="https://www.jobnet.com.mm/companies/bfi-education-services-company-limited/e-11033" target='_blank' className='block px-6 py-2 transition-colors'>Career</a>
                                     </li>
 
                                 </ul>
