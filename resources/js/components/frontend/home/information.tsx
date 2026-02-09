@@ -19,7 +19,7 @@ function Information() {
                                 <span className="font-merriweather mb-1 inline-block text-xl font-normal text-brand-core underline">“MISA”</span>
                                 <h2 className="font-merriweather mb-5 text-3xl font-bold sm:text-4xl lg:text-6xl dark:text-yellow-400">School History </h2>
                                 <p className="mb-5">
-                                    Mandalay International School of Acumen is a comprehensive Kg to 12 private international school, in primary and high school campuses; the high school enrolling up to 400 students in grades 6–12 (Year 7-13). The school opened in 2004 and graduated its first senior class in 2009. Mandalay International Science academy is registered at the Cambridge Assessment International Education as Cambridge International school, holds membership in the College Board and is recognized by the UCAS.
+                                    Mandalay International School of Acumen is a comprehensive Kg to 12 private international school, in primary and high school campuses; the high school enrolling up to 400 students in grades 6–12 (Year 7-13). The school opened in 2004 and graduated its first senior class in 2009. Mandalay International School of Acumen is registered at the Cambridge Assessment International Education as Cambridge International school, holds membership in the College Board and is recognized by the UCAS.
 
                                     {' '}
                                 </p>

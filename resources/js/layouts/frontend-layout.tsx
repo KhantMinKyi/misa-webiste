@@ -233,7 +233,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                             <Link href="#"
                                 className={`transition border-r-2 px-6 py-3
                                     ${isActive('/studentadmission') ||
-                                        isActive('/studentadmission') ||
+                                        isActive('/admission-process') ||
                                         isActive('/studentadmission') ||
                                         isActive('/studentadmission')
                                         ? `text-brand border-brand ${isScrolled ? 'text-sm xl:text-base' : ''}`
@@ -247,8 +247,8 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                     <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/studentadmission') ? 'text-brand' : 'hover:text-brand'}`}>
                                         <Link href="/studentadmission" className='block px-6 py-2 transition-colors'>Student Admission</Link>
                                     </li>
-                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} hover:text-brand`}>
-                                        <Link href="#" className='block px-6 py-2 transition-colors'>Admission Process</Link>
+                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/admission-process') ? 'text-brand' : 'hover:text-brand'}`}>
+                                        <Link href="/admission-process" className='block px-6 py-2 transition-colors'>Admission Process</Link>
                                     </li>
                                     <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} hover:text-brand`}>
                                         <Link href="#" className='block px-6 py-2 transition-colors'>Withdrawal Policy </Link>

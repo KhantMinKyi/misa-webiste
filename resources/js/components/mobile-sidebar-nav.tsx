@@ -335,7 +335,8 @@ const MobileSidebarNav: React.FC<MobileSidebarNavProps> = ({ isOpen, onClose, cu
                                     </Link>
                                 </li>
                                 <li className='border-b border-gray-700 hover:text-brand'>
-                                    <Link href='#' className='block px-6 py-2 transition-colors' onClick={handleLinkClick}>
+                                    <Link href='/admission-process' className={`block px-6 py-2 transition-colors ${isActive('/admission-process') ? 'text-brand' : ''
+                                        }`} onClick={handleLinkClick}>
                                         Admission Process
                                     </Link>
                                 </li>
