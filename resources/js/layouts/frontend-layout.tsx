@@ -67,7 +67,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                     </div>
                 </div>
             </div>
-            <div ref={topBarRef} className='w-full text-sm p-4 hidden md:block lg:hidden '>
+            <div className='w-full text-sm p-4 hidden md:block lg:hidden '>
                 <div className='flex items-center justify-center gap-4 py-2'> {/* Added py-2 for spacing */}
                     <div className='flex '>
                         <img src='/img/logo/misa_tagline.png' className='w-sm dark:hidden' alt="" />
@@ -202,8 +202,7 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
                                     ${isActive('/kindergarten-programs') ||
                                         isActive('/primary-school-programs') ||
                                         isActive('/secondary-school-programs') ||
-                                        isActive('/kindergarten-programs') ||
-                                        isActive('/kindergarten-programs')
+                                        isActive('/igcse')
                                         ? `text-brand border-brand ${isScrolled ? 'text-sm xl:text-base' : ''}`
                                         : `${isScrolled ? 'text-secondary-brand-dark hover:text-brand border-gray-300 text-sm xl:text-base' : 'text-white hover:text-brand border-gray-600'}`}`
                                 }
@@ -222,8 +221,9 @@ const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
 
                                         <Link href="/secondary-school-programs" className='block px-6 py-2 transition-colors'>Secondary</Link>
                                     </li>
-                                    <li className='hover:text-brand'>
-                                        <Link href="#" className='block px-6 py-2 transition-colors'>IGCSE</Link>
+                                    <li className={`border-b ${isScrolled ? 'border-gray-300' : 'border-gray-700'} ${isActive('/igcse') ? 'text-brand' : 'hover:text-brand'}`}>
+
+                                        <Link href="/igcse" className='block px-6 py-2 transition-colors'>IGCSE</Link>
                                     </li>
 
                                 </ul>
