@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { 
-    HiOutlineMail, 
-    HiOutlinePhone, 
-    HiOutlineLocationMarker, 
+import {
+    HiOutlineMail,
+    HiOutlinePhone,
+    HiOutlineLocationMarker,
     HiArrowRight,
     HiOutlineOfficeBuilding
 } from 'react-icons/hi';
@@ -34,27 +34,26 @@ interface FormErrors {
 }
 
 // --- Configuration: Campus Data ---
-// TODO: Replace 'mapEmbedUrl' with your actual Google Maps Embed URLs
 const campuses: Campus[] = [
     {
         id: 'main',
-        name: 'Main Campus (Primary)',
-        address: 'No. 123, 62nd Street, Between 30th & 31st St, Mandalay',
-        phone: '01-551795',
-        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.845129946921!2d96.11669217559255!3d21.978906179918987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6dad0cf8e4af%3A0x8adc664a1a853bfc!2sMandalay%20International%20School%20of%20Acumen!5e0!3m2!1sen!2smm!4v1770646090391!5m2!1sen!2smm" 
+        name: 'Highschool Campus',
+        address: 'Corner of 53*30th Street,Chan Aye Thar San Tsp, Mandalay',
+        phone: '(09) 777488802, (09) 777488803',
+        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.845129946921!2d96.11669217559255!3d21.978906179918987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6dad0cf8e4af%3A0x8adc664a1a853bfc!2sMandalay%20International%20School%20of%20Acumen!5e0!3m2!1sen!2smm!4v1770646090391!5m2!1sen!2smm"
     },
     {
-        id: 'secondary',
-        name: 'Secondary Campus (IGCSE)',
-        address: 'No. 456, 73rd Street, Mandalay',
-        phone: '01-541085',
+        id: 'primary',
+        name: 'Primary Campus',
+        address: 'No.118 (A,B,D), Block 514/3, 58th St (Bet 27th & 28th St), Kan Kauk Qtr, Chan Qye Thar Zan Tsp, Mandalay',
+        phone: '(02) 4072753, (09) 43060423, (09) 43060027',
         mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.9720912829384!2d96.12522857559235!3d21.97403417992243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d8b63a3554d%3A0x465c324f987d3baa!2sMandalay%20International%20School%20of%20Acumen!5e0!3m2!1sen!2smm!4v1770646179215!5m2!1sen!2smm"
     },
     {
         id: 'preschool',
         name: 'Preschool Campus',
-        address: 'No. 789, 35th Street, Mandalay',
-        phone: '01-546837',
+        address: '72nd Street, Between 27th Street and 28th Street Mandalay',
+        phone: '(09) 973558362, (09) 975914489',
         mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.0!2d96.12!3d21.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDU4JzEyLjAiTiA5NsKwMDcnMTIuMCJF!5e0!3m2!1sen!2smm!4v1600000000000!5m2!1sen!2smm"
     }
 ];
@@ -126,7 +125,7 @@ const ContactSection: React.FC = () => {
     return (
         <section className="py-20 bg-gray-50 dark:bg-black scroll-mt-20" id="contact">
             <div className="container mx-auto px-4 max-w-7xl">
-                
+
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-brand-core mb-6">
@@ -139,10 +138,10 @@ const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-                    
+
                     {/* --- LEFT COLUMN: Campus Tabs & Maps --- */}
                     <div className="space-y-6">
-                        
+
                         {/* Tabs */}
                         <div className="flex flex-wrap gap-2">
                             {campuses.map((campus) => (
@@ -164,10 +163,10 @@ const ContactSection: React.FC = () => {
 
                         {/* Active Campus Card */}
                         <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-lg border border-gray-100 dark:border-neutral-800 overflow-hidden flex flex-col h-full min-h-[500px]">
-                            
+
                             {/* Map Frame */}
                             <div className="relative h-64 md:h-80 w-full bg-gray-200 dark:bg-neutral-800">
-                                <iframe 
+                                <iframe
                                     src={activeCampus.mapEmbedUrl}
                                     className="absolute inset-0 w-full h-full border-0"
                                     allowFullScreen={true}
@@ -183,7 +182,7 @@ const ContactSection: React.FC = () => {
                                     <HiOutlineOfficeBuilding className="text-brand-core" />
                                     {activeCampus.name}
                                 </h3>
-                                
+
                                 <div className="space-y-6">
                                     {/* Address */}
                                     <div className="flex items-start gap-4">
@@ -210,7 +209,7 @@ const ContactSection: React.FC = () => {
                                             </a>
                                         </div>
                                     </div>
-                                    
+
                                     {/* Email General */}
                                     <div className="flex items-start gap-4">
                                         <div className="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0 text-brand-core">
@@ -238,7 +237,7 @@ const ContactSection: React.FC = () => {
                         </p>
 
                         <form onSubmit={handleSubmit} className="space-y-5">
-                            
+
                             {/* Name */}
                             <div className="space-y-1">
                                 <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Full Name</label>
