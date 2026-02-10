@@ -6,9 +6,9 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Spinner } from '@/components/ui/spinner';
 import AuthLayout from '@/layouts/auth-layout';
-import { register } from '@/routes';
+// import { register } from '@/routes';
 import { store } from '@/routes/login';
-import { request } from '@/routes/password';
+// import { request } from '@/routes/password';
 import { Form, Head } from '@inertiajs/react';
 
 interface LoginProps {
@@ -55,7 +55,7 @@ export default function Login({
                             <div className="grid gap-2">
                                 <div className="flex items-center">
                                     <Label htmlFor="password">Password</Label>
-                                    {canResetPassword && (
+                                    {/* {canResetPassword && (
                                         <TextLink
                                             href={request()}
                                             className="ml-auto text-sm"
@@ -63,7 +63,7 @@ export default function Login({
                                         >
                                             Forgot password?
                                         </TextLink>
-                                    )}
+                                    )} */}
                                 </div>
                                 <Input
                                     id="password"
@@ -101,9 +101,9 @@ export default function Login({
                         {canRegister && (
                             <div className="text-center text-sm text-muted-foreground">
                                 Don't have an account?{' '}
-                                <TextLink href={register()} tabIndex={5}>
+                                {/* <TextLink href={register()} tabIndex={5}>
                                     Sign up
-                                </TextLink>
+                                </TextLink> */}
                             </div>
                         )}
                     </>
