@@ -135,4 +135,20 @@ class GeneralPageRouteController extends Controller
     {
         return Inertia::render('frontend/contact_us/ContactUs');
     }
+    public function showPostDetail($id)
+    {
+        // Fetch post with relationships
+        $post = Post::with(['category_tags.category_tag'])->findOrFail($id);
+
+        // Optional: Fetch related posts (e.g., same category, excluding current)
+        $relatedPosts = Post::where('id', '!=', $id)
+            ->latest()
+            ->take(3)
+            ->get();
+
+        return Inertia::render('frontend/PostDetail', [
+            'post' => $post,
+            'related_posts' => $relatedPosts
+        ]);
+    }
 }

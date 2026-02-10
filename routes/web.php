@@ -12,6 +12,7 @@ use Laravel\Fortify\Features;
 // })->name('home');
 
 Route::get('/', [GeneralPageRouteController::class, 'getHomePage'])->name('home');
+Route::get('/post-detail/{id}', [GeneralPageRouteController::class, 'showPostDetail'])->name('post-detail');
 require __DIR__ . '/route_groups/frontend/about_us.php';
 require __DIR__ . '/route_groups/frontend/student_life.php';
 require __DIR__ . '/route_groups/frontend/education.php';

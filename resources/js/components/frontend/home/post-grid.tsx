@@ -2,6 +2,7 @@
 
 // components/post-grid.tsx
 import type { CategoryTag, Post } from '@/types';
+import { Link } from '@inertiajs/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type React from 'react';
 import { useState } from 'react';
@@ -78,10 +79,11 @@ const PostGrid: React.FC<PostGridProps> = ({ posts, categories, onPostClick, onF
             {/* Grid Layout */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                 {currentPosts.map((post) => (
-                    <div
+                    <Link
                         key={post.id}
                         className="group cursor-pointer overflow-hidden rounded-lg shadow-sm transition-shadow hover:shadow-lg"
                         onClick={() => onPostClick && onPostClick(post)}
+                        href={'/post-detail/' + post.id}
                     >
                         <div className="relative overflow-hidden">
                             <img
@@ -100,7 +102,7 @@ const PostGrid: React.FC<PostGridProps> = ({ posts, categories, onPostClick, onF
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 
