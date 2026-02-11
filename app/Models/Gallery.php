@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Gallery extends Model
 {
     //
+    protected $table = 'galleries';
     protected $fillable = ['src', 'alt', 'category_id', 'created_user_id', 'updated_user_id'];
 
 
