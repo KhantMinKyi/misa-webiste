@@ -151,4 +151,9 @@ class GeneralPageRouteController extends Controller
             'related_posts' => $relatedPosts
         ]);
     }
+
+    public function getPrivacyPolicyPage()
+    {
+        return Inertia::render('frontend/PrivacyPolicy');
+    }
 }

@@ -20,6 +20,7 @@ require __DIR__ . '/route_groups/frontend/education.php';
 require __DIR__ . '/route_groups/frontend/admission.php';
 require __DIR__ . '/route_groups/frontend/events_and_news.php';
 require __DIR__ . '/route_groups/frontend/contact_us.php';
+require __DIR__ . '/route_groups/frontend/privacy_policy.php';
 
 
 
