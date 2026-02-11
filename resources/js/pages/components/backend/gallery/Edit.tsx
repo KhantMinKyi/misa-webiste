@@ -29,23 +29,23 @@ export default function GalleryEdit({ gallery }: { gallery: any }) {
             <Head title="Edit Photo" />
 
             <div className="py-12 w-7xl mx-auto">
-                <div className="bg-white p-6 rounded-lg shadow">
+                <div className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow">
                     <h2 className="text-lg font-bold mb-4">Edit Photo</h2>
 
                     <form onSubmit={submit}>
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Title / Alt</label>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-brand-core">Title / Alt</label>
                             <input
                                 type="text"
                                 value={data.alt}
                                 onChange={e => setData('alt', e.target.value)}
-                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                                className="w-full rounded-lg border-gray-300 my-2 px-2 py-2 dark:border-brand-core bg-gray-100 dark:bg-neutral-900 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-brand-core  dark:focus:ring-brand-core"
                             />
                             {errors.alt && <p className="text-red-500 text-xs">{errors.alt}</p>}
                         </div>
 
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Replace Image (Optional)</label>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-brand-core">Replace Image (Optional)</label>
                             <input
                                 type="file"
                                 onChange={e => {
@@ -54,7 +54,7 @@ export default function GalleryEdit({ gallery }: { gallery: any }) {
                                         setPreview(URL.createObjectURL(e.target.files[0]));
                                     }
                                 }}
-                                className="mt-1 block w-full text-sm text-gray-500"
+                                className="mt-1 block w-full text-sm text-gray-500 dark:text-brand my-2 px-2 py-2 rounded-lg dark:bg-neutral-900 bg-gray-100"
                             />
                             {/* Preview */}
                             <div className="mt-2">
@@ -66,8 +66,8 @@ export default function GalleryEdit({ gallery }: { gallery: any }) {
                             <Link
                                 //  href={route('galleries.index')}
                                 href={'/admin/galleries/'}
-                                className="px-4 py-2 bg-gray-200 rounded text-gray-700">Cancel</Link>
-                            <button type="submit" disabled={processing} className="px-4 py-2 bg-blue-600 text-white rounded">
+                                className="bg-red-600 hover:bg-red-700 dark:bg-red-600 dark:hover:bg-red-600 text-white px-6 py-2.5 rounded-lg font-medium shadow-sm transition-all disabled:opacity-50">Cancel</Link>
+                            <button type="submit" disabled={processing} className="bg-blue-600 hover:bg-blue-700 dark:bg-brand-core dark:hover:bg-brand-dark text-white px-6 py-2.5 rounded-lg font-medium shadow-sm transition-all disabled:opacity-50">
                                 {processing ? 'Updating...' : 'Update'}
                             </button>
                         </div>

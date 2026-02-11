@@ -33,6 +33,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
     require __DIR__ . '/route_groups/backend/facility.php';
     require __DIR__ . '/route_groups/backend/users.php';
     require __DIR__ . '/route_groups/backend/events_and_news.php';
+    require __DIR__ . '/route_groups/backend/calendar.php';
 });
 
 

@@ -49,26 +49,26 @@ export default function GalleryIndex({ galleries }: Props) {
                         <Link
                             // href={route('galleries.create')}
                             href='/admin/galleries/create'
-                            className="inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 transition"
+                            className="inline-flex items-center px-4 py-3 bg-blue-600 dark:bg-brand-core border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 transition"
                         >
                             <HiPlus className="mr-2 text-base" /> Add Photo
                         </Link>
                     </div>
 
                     {/* Table */}
-                    <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg border border-gray-200 dark:border-gray-700">
-                        <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                            <thead className="bg-gray-50 dark:bg-gray-750">
+                    <div className="bg-white dark:bg-neutral-900 overflow-auto shadow-sm sm:rounded-lg border border-gray-200 dark:border-brand-core">
+                        <table className="min-w-full divide-y divide-gray-200 dark:divide-brand-core">
+                            <thead className="bg-gray-50 dark:bg-brand-core ">
                                 <tr>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Preview</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title / Alt</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">Preview</th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">Title / Alt</th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">Date</th>
                                     <th className="relative px-6 py-3"><span className="sr-only">Actions</span></th>
                                 </tr>
                             </thead>
-                            <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                                {galleries.data.map((item) => (
-                                    <tr key={item.id} className="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                            <tbody className="bg-white dark:bg-neutral-900 divide-y divide-gray-200 dark:divide-brand-dark">
+                                {galleries.data.map((item, index) => (
+                                    <tr key={item.id} className="hover:bg-gray-50 dark:hover:bg-neutral-950 transition">
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="h-12 w-20 rounded overflow-hidden border border-gray-200">
                                                 <img className="h-full w-full object-cover" src={item.src} alt={item.alt} />
@@ -81,8 +81,8 @@ export default function GalleryIndex({ galleries }: Props) {
                                             {new Date(item.created_at).toLocaleDateString()}
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                            <Menu as="div" className="relative inline-block text-left">
-                                                <Menu.Button className="p-2 rounded-full hover:bg-gray-100 text-gray-500">
+                                            <Menu as="div" className="relative inline-block text-left ">
+                                                <Menu.Button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-brand-core dark:text-white text-gray-500">
                                                     <HiDotsVertical className="text-xl" />
                                                 </Menu.Button>
                                                 <Transition
@@ -94,14 +94,18 @@ export default function GalleryIndex({ galleries }: Props) {
                                                     leaveFrom="transform opacity-100 scale-100"
                                                     leaveTo="transform opacity-0 scale-95"
                                                 >
-                                                    <Menu.Items className="absolute right-0 mt-2 w-36 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg  ring-opacity-5 focus:outline-none z-50">
-                                                        <div className="px-1 py-1">
+                                                    <Menu.Items
+                                                        className={`absolute right-0 w-36 origin-top-right bg-white dark:bg-neutral-900 divide-y divide-gray-100 rounded-md shadow-lg ring-opacity-5 focus:outline-none z-50 ${index >= galleries.data.length - 2
+                                                            ? 'bottom-full mb-2 origin-bottom-right' // Open Upwards for last items
+                                                            : 'mt-2 origin-top-right'                // Open Downwards for others
+                                                            }`}
+                                                    ><div className="px-1 py-1">
                                                             <Menu.Item>
                                                                 {({ active }) => (
                                                                     <Link
                                                                         href={`/admin/galleries/${item.id}/edit`}
                                                                         // href={route('galleries.edit', item.id)}
-                                                                        className={`${active ? 'bg-blue-500 text-white' : 'text-gray-900'} group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                                                                        className={`${active ? 'bg-blue-500 text-white dark:text-white' : 'text-gray-900 dark:text-white'} group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                                                                     >
                                                                         <HiPencil className="mr-2" /> Edit
                                                                     </Link>
@@ -111,7 +115,7 @@ export default function GalleryIndex({ galleries }: Props) {
                                                                 {({ active }) => (
                                                                     <button
                                                                         onClick={() => handleDelete(item.id)}
-                                                                        className={`${active ? 'bg-red-500 text-white' : 'text-gray-900'} group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                                                                        className={`${active ? 'bg-red-500 text-white dark:text-white' : 'text-gray-900 dark:text-white'} group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                                                                     >
                                                                         <HiTrash className="mr-2" /> Delete
                                                                     </button>
@@ -135,7 +139,7 @@ export default function GalleryIndex({ galleries }: Props) {
                                 <Link
                                     key={i}
                                     href={link.url}
-                                    className={`px-3 py-1 border rounded text-sm ${link.active ? 'bg-blue-600 text-white' : 'bg-white text-gray-700'}`}
+                                    className={`px-3 py-1 border rounded text-sm ${link.active ? 'bg-blue-600 dark:bg-brand-core text-white' : 'bg-white text-gray-700'}`}
                                     dangerouslySetInnerHTML={{ __html: link.label }}
                                 />
                             )

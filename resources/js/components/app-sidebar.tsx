@@ -13,7 +13,7 @@ import {
 import { dashboard } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { Activity, BookOpen, Building, Folder, GalleryHorizontal, GraduationCap, LayoutGrid, Users } from 'lucide-react';
+import { Activity, BookOpen, Building, Calendar, Folder, GalleryHorizontal, GraduationCap, LayoutGrid, Users } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -41,6 +41,11 @@ const mainNavItems: NavItem[] = [
         title: 'Event & News',
         href: '/admin/events-and-news',
         icon: Activity,
+    },
+    {
+        title: 'Calendar',
+        href: '/admin/calendars',
+        icon: Calendar,
     },
     {
         title: 'User Management',
