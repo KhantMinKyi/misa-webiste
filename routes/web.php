@@ -40,12 +40,12 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
 
 
 
-Route::get('/admin-login', [AuthenticatedSessionController::class, 'create'])
+Route::get('/administration-panel/login', [AuthenticatedSessionController::class, 'create'])
     ->middleware(['guest:' . config('fortify.guard')])
-    ->name('login'); // ⚠️ You must keep the name 'login'
+    ->name('login'); 
 
 // 2. The Action (POST) - Must match the URL above
-Route::post('/admin-login', [AuthenticatedSessionController::class, 'store'])
+Route::post('/administration-panel/login', [AuthenticatedSessionController::class, 'store'])
     ->middleware(['guest:' . config('fortify.guard')])
     ->name('login.store');
 

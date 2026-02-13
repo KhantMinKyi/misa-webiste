@@ -1,33 +1,35 @@
 import AppLayout from '@/layouts/app-layout';
 import { Head, Link, useForm } from '@inertiajs/react';
 import React, { useState } from 'react';
-interface GalleryFormData {
+interface FacilityFormData {
     _method: string;
     alt: string;
+    facility_category_id: number;
     src: File | null;
 }
-export default function GalleryEdit({ gallery }: { gallery: any }) {
+export default function FacilityEdit({ facility }: { facility: any }) {
     // Fix: Use _method: 'put' to allow file upload on update
     const { data, setData, post, processing, errors } =
-        useForm<GalleryFormData>({
+        useForm<FacilityFormData>({
             _method: 'put',
-            alt: gallery.alt || '',
+            alt: facility.alt || '',
+            facility_category_id: 1,
             src: null,
         });
 
-    const [preview, setPreview] = useState(gallery.src);
+    const [preview, setPreview] = useState(facility.src);
 
     const submit = (e: React.FormEvent) => {
         e.preventDefault();
         // Fix: Use post() instead of put(), targeting the update route
-        // post(route('galleries.update', gallery.id));
-        post('/admin/galleries/' + gallery.id);
+        // post(route('facilities.update', facility.id));
+        post('/admin/facilities/' + facility.id);
     };
 
     return (
         <AppLayout
             breadcrumbs={[
-                { title: 'Gallery', href: '/admin/galleries' },
+                { title: 'Facility', href: '/admin/facilities' },
                 { title: 'Edit', href: '#' },
             ]}
         >
@@ -35,7 +37,7 @@ export default function GalleryEdit({ gallery }: { gallery: any }) {
 
             <div className="mx-auto min-w-4xl py-12">
                 <div className="rounded-lg bg-white p-6 shadow dark:bg-neutral-800">
-                    <h2 className="mb-4 text-lg font-bold">Edit Photo</h2>
+                    <h2 className="mb-4 text-lg font-bold">Edit Facility</h2>
 
                     <form onSubmit={submit}>
                         <div className="mb-4">
@@ -85,8 +87,8 @@ export default function GalleryEdit({ gallery }: { gallery: any }) {
 
                         <div className="flex justify-end gap-2">
                             <Link
-                                //  href={route('galleries.index')}
-                                href={'/admin/galleries/'}
+                                //  href={route('facilities.index')}
+                                href={'/admin/facilities/'}
                                 className="rounded-lg bg-red-600 px-6 py-2.5 font-medium text-white shadow-sm transition-all hover:bg-red-700 disabled:opacity-50 dark:bg-red-600 dark:hover:bg-red-600"
                             >
                                 Cancel
