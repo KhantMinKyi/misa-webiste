@@ -54,7 +54,7 @@ export default function FacilityIndex({ facilities }: Props) {
                     </div>
 
                     {/* Table */}
-                    <div className="overflow-auto border border-gray-200 bg-white shadow-sm sm:rounded-lg dark:border-brand-core dark:bg-neutral-900">
+                    <div className="overflow-visible border border-gray-200 bg-white shadow-sm sm:rounded-lg dark:border-brand-core dark:bg-neutral-900">
                         <table className="min-w-full divide-y divide-gray-200 dark:divide-brand-core">
                             <thead className="bg-gray-50 dark:bg-brand-core">
                                 <tr>
@@ -163,6 +163,16 @@ export default function FacilityIndex({ facilities }: Props) {
                                         </td>
                                     </tr>
                                 ))}
+                                {facilities.data.length < 1 && (
+                                    <tr className="transition hover:bg-gray-50 dark:hover:bg-neutral-950">
+                                        <td
+                                            className="py-6 text-center"
+                                            colSpan={4}
+                                        >
+                                            No Data...
+                                        </td>
+                                    </tr>
+                                )}
                             </tbody>
                         </table>
                     </div>
